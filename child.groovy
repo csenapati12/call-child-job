@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('2nd job stage1') {
             steps {
-                echo "child 1"
+                echo "child 1 $DEPLOY_TO"
             }
         }
         stage('2nd job stage 2') {
