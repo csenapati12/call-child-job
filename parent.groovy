@@ -6,10 +6,15 @@ pipeline {
                 echo "parentJob"
             }
         }
-        stage('triggerChildJob') {
+       /** stage('triggerChildJob') {
             steps {
                 build job: "childjob", wait: true
             }
+        } **/
+        stage('Stage Name') {
+           steps {
+                build(job: 'pipeline.name', parameters: [string(name: 'DEPLOY_TO', value: "test")])
+           }
         }
     }
 }
