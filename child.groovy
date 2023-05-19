@@ -8,7 +8,7 @@ pipeline {
         }
         stage('2nd job stage 2') {
             steps {
-                echo "child 2"
+                echo "child 2 $params.nodeName"
             }
         }
     }
