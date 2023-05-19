@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('2nd job stage1') {
             steps {
-                echo "child 11111111 ${params.DEPLOY_TO} and ${params.test}"
+                echo "child 11111111 ${params.DEPLOY_TO}"
             }
         }
         stage('2nd job stage 2') {
