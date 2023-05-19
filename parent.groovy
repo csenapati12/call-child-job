@@ -1,3 +1,5 @@
+def buildResult     = [:]
+def logsList        = []
 pipeline {
     agent any
     stages {
@@ -13,7 +15,7 @@ pipeline {
         } **/
         stage('Stage Name') {
            steps {
-                build(job: 'childjob', parameters: [string(name: 'DEPLOY_TO', value: "chaitanya-rakesh"), string(name: 'nodeName', value: "chaitanya-rakesh1")])
+                build(job: 'childjob', parameters: [string(name: 'nodeName', value: "chaitanya-rakesh"), string(name: 'gfxIp', value: "chaitanya-rakesh1"), string(name: 'artifactoryServer', value: "arifactory11111"), list(name: 'logsList', value: logList), map(name: 'buildResult', value: buildResult)])
            }
         }
     }
