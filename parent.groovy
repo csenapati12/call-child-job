@@ -13,7 +13,7 @@ pipeline {
         } **/
         stage('Stage Name') {
            steps {
-                build(job: 'childjob', parameters: [string(name: 'DEPLOY_TO', value: "test")])
+                build(job: 'childjob', parameters: [string(name: 'DEPLOY_TO', value: "chaitanya")])
            }
         }
     }
