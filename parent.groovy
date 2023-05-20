@@ -16,7 +16,7 @@ pipeline {
         }**/
 		 stage('Stage Name1') {
            steps {
-                build(job: 'childjob',  parameters: [DEPLOY_TO]))
+                build(job: 'childjob',  parameters: [DEPLOY_TO])
            }
         } 
        /** stage('Stage Name') {
